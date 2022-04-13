@@ -18,21 +18,19 @@ class LanguageCalls():
 
     def languageDecetion(self):
         input_lan = self.simpleOutput()
-        for language in self.langlist:
+        for language in self.langList:
             if language['code'] == input_lan:
                 return language['name'].lower()
-
-
 
 class tests(unittest.TestCase):
     
     def test_spanish(self):
         esp = 'Buenos dias señor'
-        self.assertEqual('SPANISH', LanguageCalls(esp).languageDecetion())
+        self.assertEqual('spanish', LanguageCalls(esp).languageDecetion())
 
     def test_eng(self):
         en = 'Good morning sir'
-        self.assertEqual('ENGLISH', LanguageCalls(en).languageDecetion())
+        self.assertEqual('english', LanguageCalls(en).languageDecetion())
 
 
 if __name__ == '__main__':
