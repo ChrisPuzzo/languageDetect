@@ -8,6 +8,7 @@ from rest_framework.views import Response
 from .serializers import GetAllLanguageSerializer
 from .models import languageDetect
 import detectlanguage
+from languageDetectTest import LanguageCalls
 import unittest
 
 
@@ -29,7 +30,8 @@ def getInput(request):
     context = {}
     if request.method == 'POST':
         userInput = request.POST.get('userInput')
-        detect = detectlanguage.detect([userInput])
+        #detect = detectlanguage.detect([userInput])
+        detect = LanguageCalls(userInput).languageDecetion()
         context['userInput'] = detect
     return render(request,"app.html", context)
 
