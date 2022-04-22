@@ -2,7 +2,8 @@ import detectlanguage
 import unittest
 import json
 
-detectlanguage.configuration.api_key = "8df729e6c77caed3593ca12c940683ee"
+#An API key made using a fake email
+detectlanguage.configuration.api_key = "da45506934d0aa80aa39c8c312d92894"
 
 
 
