@@ -1,7 +1,8 @@
 import detectlanguage
 import unittest
 
-detectlanguage.configuration.api_key = "8df729e6c77caed3593ca12c940683ee"
+#This API key is linked to an account made with a fake email
+detectlanguage.configuration.api_key = "da45506934d0aa80aa39c8c312d92894"
 
 # set up classe LangaugeCalls where our langauge functions will be located
 class LanguageCalls():
